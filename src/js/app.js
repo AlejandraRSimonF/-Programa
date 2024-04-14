@@ -171,7 +171,7 @@ function paginaSiguiente() {
 
 async function consultarAPI() {
     try {
-        const url = '/api/productos';
+        const url = `${location.origin}/api/productos`;
         const resultado = await fetch(url);
         const productos = await resultado.json();
         mostrarProductos(productos);
@@ -410,7 +410,7 @@ async function confirmaVenta(){
 
 
     try  {
-        const url = '/api/ventas'
+        const url = `${location.origin}/api/ventas`
         const respuesta = await fetch(url, {
             method: 'POST',
             body: datos
